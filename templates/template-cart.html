@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/155/ear-of-maize_1f33d.png"
+    />
+    <title>Cart - NODE FARM</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Nunito Sans', sans-serif;
+        color: #555;
+        background: linear-gradient(to bottom right, #9be15d, #00e3ae);
+        padding: 5rem;
+        min-height: 100vh;
+      }
+      header {
+        background-color: #f7f7f7;
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .cart-title {
+        font-family: 'Megrim', sans-serif;
+        font-size: 4rem;
+        color: #333;
+      }
+      .cart-container {
+        background: white;
+        padding: 3rem;
+        border-radius: 10px;
+        box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
+        max-width: 80rem;
+        margin: 5rem auto;
+      }
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #ddd;
+      }
+      .cart-item:last-child {
+        border-bottom: none;
+      }
+      .cart-item span {
+        font-size: 2rem;
+      }
+      .remove-btn {
+        background: red;
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+        border-radius: 5px;
+      }
+      .remove-btn:hover {
+        background: darkred;
+      }
+      .checkout-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background: #79e17b;
+        color: white;
+        padding: 1.5rem;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+        margin-top: 2rem;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .checkout-btn:hover {
+        background: #9be15d;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="cart-title">🛒 Your Cart</h1>
+      <a href="/" class="cart__link">⬅ Back to Shop</a>
+    </header>
+    <div class="cart-container">
+      {%PRODUCT_CART%}
+      <button class="checkout-btn">Checkout</button>
+    </div>
+  </body>
+</html>
